@@ -23,7 +23,7 @@ get_header();
 								the_content( sprintf(
 									wp_kses(
 										/* translators: %s: Name of current post. Only visible to screen readers */
-										__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'tactical' ),
+										__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'robertblincoe' ),
 										array(
 											'span' => array(
 												'class' => array(),
@@ -34,7 +34,7 @@ get_header();
 								) );
 
 								wp_link_pages( array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tactical' ),
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'robertblincoe' ),
 									'after'  => '</div>',
 								) );
 							?>

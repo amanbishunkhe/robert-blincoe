@@ -1,10 +1,10 @@
 <?php
 // Silence is golden.
 
-/* tactical theme supports */
-if(!function_exists( 'tactical_theme_supports' ) ):
+/* robert theme supports */
+if(!function_exists( 'robert_theme_supports' ) ):
 
-  function tactical_theme_supports(){
+  function robert_theme_supports(){
     // for rss feeds in header
     add_theme_support( 'automatic-feed-links' );
     //generates the title tag
@@ -27,11 +27,6 @@ if(!function_exists( 'tactical_theme_supports' ) ):
     =======================================*/
 
       add_image_size( 'banner-image',1665,551, true );
-      add_image_size( 'latest-articles',358,239, true );
-      add_image_size( 'review-image',150,100, true );
-      add_image_size( 'cat-banner-image',1351,207, true );
-       add_image_size( 'cat-featured-image',270,390, true );
-      add_image_size( 'single-banner-image',1351,243, true );
 
     // Switch default core markup for search form, comment form, and comments to output valid HTML5.
     add_theme_support( 'html5', array(
@@ -39,13 +34,13 @@ if(!function_exists( 'tactical_theme_supports' ) ):
     ) );
 
   }
-add_action( 'after_setup_theme','tactical_theme_supports' );
+add_action( 'after_setup_theme','robert_theme_supports' );
 endif;
-/* End of tactical theme supports */
+/* End of robert theme supports */
 /**
  * Implementing frontend Scripts and Styles used in the theme
  */
-function tactical_scripts_and_styles()
+function robert_scripts_and_styles()
 { 
   //adding google fonts
 
@@ -92,7 +87,7 @@ function tactical_scripts_and_styles()
   wp_enqueue_script('custom', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), 1.0, true);
 
 }
-add_action('wp_enqueue_scripts', 'tactical_scripts_and_styles');
+add_action('wp_enqueue_scripts', 'robert_scripts_and_styles');
 
 
 
@@ -109,8 +104,8 @@ add_filter('upload_mimes', 'add_file_types_to_uploads');
 
 
 
-add_filter( 'comment_form_fields', 'tactical_comment_fields_custom_order' );
-function tactical_comment_fields_custom_order( $fields ) {  
+add_filter( 'comment_form_fields', 'robert_comment_fields_custom_order' );
+function robert_comment_fields_custom_order( $fields ) {  
     
     $comment_field = $fields['comment'];
     $author_field = $fields['author'];
@@ -164,10 +159,10 @@ function rws_register_sidebars() {
  * Recaptcha issue
  */
 
-function disable_tactical_recaptcha(){
+function disable_robert_recaptcha(){
     if( !is_page( '6572' ) ){
         wp_dequeue_script( 'google-recaptcha' );
         wp_dequeue_script( 'wpcf7-recaptcha' );
     }
 }
-add_action('wp_enqueue_scripts', 'disable_tactical_recaptcha' , 9999 );
+add_action('wp_enqueue_scripts', 'disable_robert_recaptcha' , 9999 );

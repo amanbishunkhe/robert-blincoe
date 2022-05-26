@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access pages directly.
  * @param  [array] $param 
  * @return string
  */
-function tactical_image_src( $param ) {
+function robert_image_src( $param ) {
 
     if( !is_array( $param ) ) {
         return;
@@ -246,7 +246,7 @@ if( ! function_exists( 'get_breadcrumb' ) ) :
             echo '</div>';
             echo '</div>';
         }
-    } // end tactical_simple_breadcrumb()
+    } // end robert_simple_breadcrumb()
 endif;
 /**
  * breadcum ends
